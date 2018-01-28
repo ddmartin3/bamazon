@@ -1,0 +1,29 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Amzazon like CLI application",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddmartin3/bamazon.git"
+  },
+  "keywords": [
+    "amazonish",
+    "command",
+    "line",
+    "store"
+  ],
+  "author": "Darwood Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddmartin3/bamazon/issues"
+  },
+  "homepage": "https://github.com/ddmartin3/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^5.0.1",
+    "mysql": "^2.15.0"
+  }
+}
