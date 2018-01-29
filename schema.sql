@@ -18,7 +18,7 @@ value("dainese gloves", "motorsports", 150, 1, 5),
      ("football", "sports", 20, 5, 15),
      ("Kershaw Fillet", "Weapons", 25.00, 5, 15),
      ("Hacksaw", "tools", 50.00, 1, 5),
-     ("pikachu plush", "toys", 20, 3, 10),
+	 ("pikachu plush", "toys", 20, 3, 10),
      ("mp3 player", "electronics", 50.00, 3, 10),
      ("beyblade", "toys", 15, 2, 10),
      ("Principles", "books", 15, 10, 15),
@@ -32,3 +32,5 @@ create table departments(
 );
 
 select * from products;
+
+delete from products where productID=7;
