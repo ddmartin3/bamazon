@@ -24,8 +24,8 @@ function getAllProducts() {
         console.log("ID#: "+ res[i].productID + " | Product: " + res[i].product_name + " | Price: $" + res[i].price );
       }
       console.log("-----------------------------------");
+      userSelction();
     });
-    userSelction();
 }
 
 
@@ -49,8 +49,9 @@ function userSelction() {
                 userSelction();
             }else{
                 var updatedLevel = (res[0].stock_quantity - answer.quantity);
-                updateProduct(answer.productID,updatedLevel);
-                console.log("Thanks for shopping with us. Your total will be: $"+ (answer.quantity * res[0].price));
+                var product_sales = (answer.quantity * res[0].price)
+                updateProduct(answer.productID,updatedLevel,product_sales);
+                console.log("Thanks for shopping with us. Your total will be: $" + product_sales);
             }    
         });
     });
@@ -58,14 +59,15 @@ function userSelction() {
 
 
 //Update Funtion:
-function updateProduct(productID,updatedLevel) {
+function updateProduct(productID,updatedLevel,product_sales) {
     console.log("productID: " + productID);
     console.log("updated stock Level: " + updatedLevel);
     var query = connection.query(
       "UPDATE products SET ? WHERE ?",
-      [
+      [ 
         {
-          stock_quantity: updatedLevel
+          stock_quantity: updatedLevel,
+          product_sales: product_sales
         },
         {
           productID: productID
