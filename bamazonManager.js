@@ -28,7 +28,8 @@ function initialMenu(){
             "View Products for Sale",
             "View Low Inventories",
             "Add to Inventory",
-            "Add a New Product"
+            "Add a New Product",
+            "Exit"
         ]
     })
     .then(function(answer) {
@@ -46,8 +47,13 @@ function initialMenu(){
           break;
 
         case "Add a New Product":
-          addProduct();
+          seeDepartments();
           break;
+
+        case "Exit":
+         console.log("Thanks for using Bamazon Manaager")
+         connection.end();
+         break;
       }
     });
 };
@@ -101,8 +107,8 @@ function addProduct(){
           name: "product_name",
           message: "What is the name of the product you would like to add?"
         },{
-          name: "department_name",
-          message: "How would you categorize the product?"
+          name: "department_id",
+          message: "How would you categorize the product according to the table above?"
         },{
           name: "price",
           message: "How much should it cost?"
@@ -115,12 +121,13 @@ function addProduct(){
             "INSERT INTO products SET ?",
             {
               product_name: answer.product_name,
-              department_name: answer.department_name,
+              department_id: answer.department_id,
               price: parseInt(answer.price),
               stock_quantity: parseInt(answer.stock_quantity)
             },
             function(err, res) {
               console.log(res.affectedRows + " product inserted!\n");
+              initialMenu();
             }
         );
     });
@@ -144,6 +151,17 @@ function updateProduct(productID,updatedLevel) {
       ],
       function(err, res) {
         console.log("product updated!\n");
+        initialMenu();
       }
     );
+}
+
+function seeDepartments(){
+  connection.query("SELECT * FROM departments", function(err, res) {
+    for (var i = 0; i < res.length; i++) {
+      console.log("ID#: "+ res[i].department_id + " | Department name: " + res[i].department_name);
+    }
+    console.log("----------------------------");
+    addProduct();
+  });  
 }

@@ -49,9 +49,10 @@ function userSelction() {
                 userSelction();
             }else{
                 var updatedLevel = (res[0].stock_quantity - answer.quantity);
-                var product_sales = (answer.quantity * res[0].price)
+                var soldToday = (answer.quantity * res[0].price);
+                var product_sales = res[0].product_sales + soldToday;
                 updateProduct(answer.productID,updatedLevel,product_sales);
-                console.log("Thanks for shopping with us. Your total will be: $" + product_sales);
+                console.log("Thanks for shopping with us. Your total will be: $" + soldToday);
             }    
         });
     });
@@ -75,6 +76,7 @@ function updateProduct(productID,updatedLevel,product_sales) {
       ],
       function(err, res) {
         console.log(res.affectedRows + " products updated!\n");
+        connection.end();
       }
     );
 }
