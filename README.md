@@ -14,11 +14,11 @@ Bamazon is CLI store simulation consisting of three seperate node applications a
 
 For a demonstration on how to use the program, [this video](https://youtu.be/k1mjkPkTTgg?t=4s) shows every function that the program has.  It's best watched at an accelerated speed. 
 
-![Customer](../../images/customer.jpg)
+![Customer](https://github.com/ddmartin3/bamazon/blob/master/images/customer.JPG)
 
-![Manager](../../images/manager.jpg)
+![Manager](https://github.com/ddmartin3/bamazon/blob/master/images/manager.JPG)
 
-![Supervisor](../../images/supervisor.jpg)
+![Supervisor](https://github.com/ddmartin3/bamazon/blob/master/images/supervisor.JPG)
 
 ## Legal Stuff and Contact Information
 
