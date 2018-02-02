@@ -14,6 +14,11 @@ Bamazon is CLI store simulation consisting of three seperate node applications a
 
 For a demonstration on how to use the program, [this video](https://youtu.be/k1mjkPkTTgg?t=4s) shows every function that the program has.  It's best watched at an accelerated speed. 
 
+![Customer](images/customer.jpg)
+
+![Manager](images/manager.jpg)
+
+![Supervisor](images/supervisor.jpg)
 
 ## Legal Stuff and Contact Information
 
