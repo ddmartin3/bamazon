@@ -24,14 +24,14 @@ For a demonstration on how to use the program, [this video](https://youtu.be/k1m
 
 You can reach me at
 
-phone: 520-230-9944
-email: darwood.martin@gmail.com
-website: badmotoscootin.com
-website: evmotoblog.com
-instgram: @badmotoscootin
+*phone: 520-230-9944
+*email: darwood.martin@gmail.com
+*website: badmotoscootin.com
+*website: evmotoblog.com
+*instgram: @badmotoscootin
 
 
-Copywrite Darwood Martin 2018
+Copyright Darwood Martin 2018
 
 
 
